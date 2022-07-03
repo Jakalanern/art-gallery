@@ -1,0 +1,34 @@
+@use './vars.scss';
+@use './mixins.scss';
+
+.layout {
+  @include mixins.flexCenterHorizontalColumn;
+  font-family: vars.$font-stack;
+  max-width: 100vw;
+  min-height: 100vh;
+  background: vars.$background;
+  padding: 2em;
+  padding-bottom: 4rem;
+  color: vars.$fontColor;
+  text-align: center;
+
+  .titleWrapper {
+    @include mixins.flexCenterHorizontalColumn;
+  }
+
+  .mainTitle {
+    font-weight: 300;
+    font-size: 4rem;
+  }
+
+  .subtitle {
+    color: vars.$fontColor;
+    opacity: 0.6;
+  }
+
+  @media (max-width: 575px) {
+    .mainTitle {
+      font-size: 3rem;
+    }
+  }
+}

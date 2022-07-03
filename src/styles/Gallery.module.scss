@@ -1,0 +1,24 @@
+@use './vars.scss';
+@use './mixins.scss';
+
+.galleryGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem 1.5rem;
+  margin-top: 2rem;
+  max-width: calc(450px * 4);
+
+  .image {
+    height: 450px;
+    width: 450px;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 525px) {
+    .image {
+      height: 275px;
+      width: 275px;
+    }
+  }
+}
